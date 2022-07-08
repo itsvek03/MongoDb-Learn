@@ -1,0 +1,43 @@
+####################   Chapter 1 ###############
+
+a) What is mongodb ?
+
+Ans) MongoDB is an open-source document-oriented database that is designed to store a large scale of data and also allows you to work with that data very efficiently. 
+It is categorized under the NoSQL (Not only SQL) database because the storage and retrieval of data in the MongoDB are not in the form of tables. 
+
+    database -> Collection(Tables) -> document(data)
+
+The documents are created using the fields. Fields are key-value pairs in the documents, it is just like columns in the relation database.
+The value of the fields can be of any BSON data types like double, string, boolean, etc.
+The data stored in the MongoDB is in the format of BSON documents. 
+Here, BSON stands for Binary representation of JSON documents. Or in other words, in the backend, 
+the MongoDB server converts the JSON data into a binary form that is known as BSON and this BSON is stored and queried more efficiently.
+
+
+{
+    "name":"Sutra Hub",
+    "age":29,
+    "address":{
+        "city":"Kanpur"
+    },
+    "hobbies":[
+        {"name":"Reading"},
+        {"name":"Sports"},
+    ]
+}
+
+
+Advantage of MongoDB:->
+
+a) It is a schema-less NoSQL database. You need not to design the schema of the database when you are working with MongoDB.
+b) It does not support join operation.
+c) It provides great flexibility to the fields in the documents.
+d) It is a document oriented database and the data is stored in BSON documents.
+e) It does not require any SQL injection.
+
+Disadvantage of MongoDB :->
+a) It uses high memory for data storage.
+b) You are not allowed to store more than 16MB data in the documents.
+c) The nesting of data in BSON is also limited you are not allowed to nest data more than 100 levels.
+
+b) Difference between NoSQL and SQL ?
