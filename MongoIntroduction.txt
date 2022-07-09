@@ -41,3 +41,18 @@ b) You are not allowed to store more than 16MB data in the documents.
 c) The nesting of data in BSON is also limited you are not allowed to nest data more than 100 levels.
 
 b) Difference between NoSQL and SQL ?
+
+NOSQL -> Stores data like documents,key-value pairs, wide-columns and graphs
+SQL -> Store data into tables with fixed rows and columns
+
+NoSQL  -> Stored unstructured data
+SQL   -> Stored structured data
+
+NOSQL -> Schema is flexible
+SQL  -> Schema is rigid
+
+NoSQL  -> Does not support joins
+SQL   -> Supports joins
+
+NoSQL  -> follows CAP Theorem
+SQL    -> follows ACID property

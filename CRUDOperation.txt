@@ -1,0 +1,100 @@
+------------------------------------------ COMMANDS ----------------------
+
+
+------------------  DATABASE ------------------------------------
+a) show dbs  -> It shows the database present into the server
+
+---> show dbs
+
+Note :-> Database is not created till there is one document present into the Collection
+
+---> To create a database or switch to database use the "use keyword"
+
+b) use flights    -> Here flight is the database name
+
+
+c) db.dropDatabase()  -> To delete the database from the server
+
+db.dropDatabase()
+
+------------------------- END --------------------------
+
+
+
+-------------------------------- Collections -----------------------------------
+
+a) To create a collection
+
+1st way -> db.createCollection()
+2nd way  -> Insert your first record it will automatically create the record
+
+Syntax:->
+db.createCollection(name,{options})
+
+name -> name of the collection
+capped ->  If true, enables a capped collection. 
+            Capped collection is a fixed size collection that automatically overwrites its oldest entries when it reaches its maximum size.
+            If you specify true, you need to specify size parameter also.
+
+autoIndexId  => If true, automatically create index on _id field.s Default value is false.
+
+size	=>  Specifies a maximum size in bytes for a capped collection. If capped is true, then you need to specify this field also.
+
+max	=> Specifies the maximum number of documents allowed in the capped collection.
+
+Eg:-> db.createCollection("flightData", { capped : true, autoIndexID : true, size : 6142800, max : 10000 } )
+
+OR =>
+
+db.flightData.insertOne({"name:"Spice Jet"})
+
+Note :-> Every data u enter have unique Id i.e Object ID
+
+
+b) To show the collection
+
+show collections
+
+c) To drop the collection
+
+db.collection_name.drop()
+
+db.flightData.drop()
+
+---------------------------- END -----------------------------------------
+
+---------------------------- CRUD DOCUMNETS -----------------------------
+
+a) To insert the records 
+        db.collection_name.insert()
+
+    -> For insertOne Documents  -> It can insert only one document
+
+        db.flightData.insertOne(doc);
+
+    -> For insertMany Documents  -> It can used for inserting multiple documents
+
+         db.flightData.insertOne(doc);
+
+
+
+    -> Or use simply insert
+         db.flightData.insert(doc);
+
+b) To show the documents
+    db.collection_name.find()
+
+    eg: -> db.flightData.find().pretty()
+
+c) To show only One Documents
+    db.collection_name.findOne()
+
+
+    --> Conditions
+
+
+
+
+
+
+-------------------------------- END -------------------------
